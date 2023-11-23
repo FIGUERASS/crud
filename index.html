@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>crud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fade" class="hide"></div>
+    <main>
+            <div class="header">
+                <span>cadastro de funcionarios</span>
+                <button class="butao"> Adicionar </button>
+            </div> 
+        <div class="tabela">
+            <table>
+                <thead>
+                        <tr>
+                            <th>nome</th>
+                            <th>Cod do vendedor</th>
+                            <th>cargo</th>
+                            <th>Cod da venda</th>
+                            <th>valor da venda</th>
+                            <th><button id="abrir-modal">Editar</button></th>
+                            <th class="acao">excluir</th>
+                        </tr>
+                </thead>
+            </table>
+        </div>
+    <div id="modal" class="hide">
+        <div class="modal-container">
+            <form>
+                <label for="input1"> nome</label>
+                <input for="input1" type="text" required />
+                <label for="input1">Cod do vendedor </label>
+                <input for="input1" type="number" required />
+                <label for="input1">cargo </label>
+                <input for="input1" type="text" required />
+                <label for="input1">Cod da venda</label>
+                <input for="input1" type="number" required />
+                <label for="input1">valor da venda</label>
+                <input for="input1" type="number" required />
+            </form>
+            <button id="fechar-modal">fechar</button>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
