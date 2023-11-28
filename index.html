@@ -3,49 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script> 
     <title>crud</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="fade" class="hide"></div>
-    <main>
-            <div class="header">
-                <span>cadastro de funcionarios</span>
-                <button class="butao"> Adicionar </button>
-            </div> 
-        <div class="tabela">
-            <table>
-                <thead>
-                        <tr>
-                            <th>nome</th>
-                            <th>Cod do vendedor</th>
-                            <th>cargo</th>
-                            <th>Cod da venda</th>
-                            <th>valor da venda</th>
-                            <th><button id="abrir-modal">Editar</button></th>
-                            <th class="acao">excluir</th>
-                        </tr>
-                </thead>
-            </table>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <h3>Cadastro de Funcionarios</h3>
+            </div>
+            <div class="col text-end">
+                <button id="btnAdicionar" class="btn btn-success">relatorio</button>
+            </div>
         </div>
-    <div id="modal" class="hide">
-        <div class="modal-container">
-            <form>
-                <label for="input1"> nome</label>
-                <input for="input1" type="text" required />
-                <label for="input1">Cod do vendedor </label>
-                <input for="input1" type="number" required />
-                <label for="input1">cargo </label>
-                <input for="input1" type="text" required />
-                <label for="input1">Cod da venda</label>
-                <input for="input1" type="number" required />
-                <label for="input1">valor da venda</label>
-                <input for="input1" type="number" required />
-            </form>
-            <button id="fechar-modal">fechar</button>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cod do vendedor</th>
+                    <th>Cargo</th>
+                    <th>Cod da venda</th>
+                    <th>Valor da venda</th>
+                    <th><button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal">editar</button></th>
+                    <th><button class="btn btn-light" id="">excluir</button></th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+            </tbody>
+        </table>
+
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">EDITAR DADOS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formUpdate">
+                            <div class="mb-1">
+                                <label for="nomeUpdate" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nomeUpdate">
+                            </div>
+                            <div class="mb-1">
+                                <label for="codVendedor" class="form-label">Cod do Vendedor</label>
+                                <input type="number" class="form-control" id="codVendedor">
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="cargo" class="form-label">Cargo</label>
+                                <input type="text" class="form-control" id="cargo">
+                            </div>
+                            <div class="mb-2">
+                                <label for="codVenda" class="form-label">Cod da Venda</label>
+                                <input type="number" class="form-control" id="codVenda">
+                            </div>
+                            <div class="mb-2">
+                                <label for="valorVenda" class="form-label">Cod da Venda</label>
+                                <input type="email" class="form-control" id="valorVenda">
+                            </div>
+                            <div class="text-end">
+                                <button id="btnEditarSalvar" type="submit" class="btn btn-primary">Salvar</button>
+            
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </main>
+    
 </body>
 </html>
