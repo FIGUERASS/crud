@@ -6,7 +6,7 @@
     padding: 0;
 }
 html,body{
-    overflow-y: hidden;
+   
     overflow-x: hidden;
 }
 header{
@@ -30,7 +30,7 @@ li ,a{
     font-family: "Montserrat", sans-serif;
     font-weight:500 ;
     font-size: 16px;
-    color: #1F618D ;
+    color: #017143;
     list-style-type: none;
     cursor: pointer;
 }
@@ -60,9 +60,16 @@ li ,a{
         position: absolute;
         bottom: -450px;
         right: -500px;
-        width: 1200px;
-        height: 1200px;
+        width: 950px;
+        height: 950px;
         border-radius: 50%;
         background-color: #017143;
     }
-  
+    .texto-sobre{
+        margin-top: 110px;
+    }
+    .texto-sobre h1{
+        font-size: 50px;
+        margin-left: 100px;
+        font-family:"Montserrat", sans-serif;
+    }
