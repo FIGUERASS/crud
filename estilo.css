@@ -5,26 +5,33 @@
     margin: 0;
     padding: 0;
 }
-html,body{
-   
-    overflow-x: hidden;
-}
-header{
-    height: 15vh;
-    background: #F8F9F9;
+.position{
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    box-shadow: 0 0 1rem black;
 }
-img {
-    display: flex;
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; 
+
+}
+header.rolagem{
+    background-color: #fff;
+    padding: 5px 10%;
+}
+header.rolagem li a{
+    color:   black;
+    
+}
+#logo {
+    
     height: 45px;
-    width: auto;
-    margin-right: auto;
     cursor: pointer;
-    padding-left: auto;
 }
 li ,a{
     font-family: "Montserrat", sans-serif;
@@ -32,44 +39,142 @@ li ,a{
     font-size: 16px;
     color: #017143;
     list-style-type: none;
+    text-decoration: none;
     cursor: pointer;
+}
+.links link{
+    color: #fff;
+
 }
 .link li {
     display: inline-block;
     padding: 0px 20px;
 }
-.info {
+/* .info {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     font-weight:500 ;
     font-size: 16px;
-    color: black ;
+    color: black ; }*/
+
+.png{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
-    .png{
-        text-decoration: solid;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    section.sobre{
-        position: relative;
-        height: calc(100%-200px);
-    }
-    .extras{
-        position: absolute;
-        bottom: -450px;
-        right: -500px;
-        width: 950px;
-        height: 950px;
-        border-radius: 50%;
-        background-color: #017143;
-    }
-    .texto-sobre{
-        margin-top: 110px;
-    }
-    .texto-sobre h1{
-        font-size: 50px;
-        margin-left: 100px;
-        font-family:"Montserrat", sans-serif;
-    }
+/* section.sobre{
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    height: calc(100%-200px);
+} */
+/* .extras{
+    position: absolute;
+    bottom: -450px;
+    right: -500px;
+    width: 950px;
+    height: 950px;
+    border-radius: 50%;
+    background-color: #017143;
+} */
+#titulo-sobre h1{
+    font-size: 50px;
+    margin-left: 100px;
+    font-family:"Montserrat", sans-serif;
+}
+
+.banner{
+    background-image: url(green.jpg);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    height: 200vh;
+    
+  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;  *
+}
+/* .banner section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+   
+    color: rgba(0, 0, 0, 0.685);
+} */
+.banner img{
+    height: 1080px; width:100%;
+}
+.banner h1{
+    font-size: 3.1em;
+    color: whitesmoke;
+
+}
+
+#container-imagem {
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid black; /* Optional: Added a border for visualization */
+    width: 100%;
+    height: 1080px;
+}
+#container-sobre {
+    width: 100%;
+    height: 300px; 
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.685);
+    border-radius: 0px 0px 7px 7px;
+}
+#c-sobre-info {
+    width: 50%;
+    height: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+#titulo-sobre {
+    width: 100%;
+}
+#texto-sobre {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+#c-sobre-foto {
+    width: 50%;
+    height: 300px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+#container-cards {
+    border: 1px solid blue;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+#container-rodape {
+    border: 1px solid blue;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
